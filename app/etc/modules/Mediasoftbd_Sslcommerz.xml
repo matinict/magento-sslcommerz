@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Mediasoftbd_Sslcommerz>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Mediasoftbd_Sslcommerz>
+    </modules>
+</config>
