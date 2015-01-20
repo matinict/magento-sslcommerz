@@ -7,18 +7,16 @@
 For Live Store Update:
 
 1. Remove testbox  Url  Value ./app/design/frontend/base/default/template/Sslcommerz/redirect.phtml
-action="https://www.sslcommerz.com.bd/testbox/process/index.php" Change to 
-action="https://www.sslcommerz.com.bd/process/index.php">
+action="https://www.sslcommerz.com.bd/gwprocess/testbox/" Remove testbox as action='https://www.sslcommerz.com.bd/gwprocess/'>
 
 
-<input type="hidden" name="store_id" value="test"> Change value="dailybazar24test001" 
+<input type="hidden" name="store_id" value="testbox"> Change value="yourstoreid" 
 
-2. Remove testbox url and add your store vai
+2. Remove testbox url and add your store id Passward
+/site/app/design/frontend/default/blacknwhite/template/checkout/success.phtml 
 
-/site/app/design/frontend/default/your_theme/template/checkout/success.phtml 
-
-[not mandatory: ./app/design/frontend/default/default/template/checkout/success.phtml if use another/change theme not mendatory]
-
-
-$c = new soapclient('https://www.sslcommerz.com.bd/testbox/validator/validationserver.php?wsdl');  Remove testbox
-$c = new soapclient('https://www.sslcommerz.com.bd/validator/validationserver.php?wsdl');
+$store_id=urlencode("testbox"); Change"yourstoreid" 
+$store_passwd=urlencode("qwerty"); Change"your-store password" 
+$requested_url = ("https://www.sslcommerz.com.bd/validator/api/testbox/validationserverAPI.php
+Remove  testbox
+$requested_url = ("https://www.sslcommerz.com.bd/validator/api/validationserverAPI.php
