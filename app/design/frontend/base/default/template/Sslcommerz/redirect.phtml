@@ -12,23 +12,19 @@ $orderId = Mage::getSingleton('checkout/session')->getLastRealOrderId();
 $_order->loadByIncrementId($orderId);
 
 // Change Your Store Url Here.............
-
-//$_storeUrl = "http://192.168.69.190/infinitymegamall.com";
-//$_storeUrl = "http://demo.sslwireless.com/infinitymegamall";
-//http://demo.sslwireless.com/infinitymegamall
 ?>
-<form name="Sslcommerzform" method="post" action="https://www.sslcommerz.com.bd/testbox/process/index.php">
-	
+<form name="Sslcommerzform" method="post" action="https://www.sslcommerz.com.bd/gwprocess/testbox/">
+<!-- <form id='payment_gw' name='payment_gw' method='POST' action='https://www.sslcommerz.com.bd/gwprocess/'>-->	
 <!-- <form name="Sslcommerzform" method="post" action="https://www.sslcommerz.com.bd/process/index.php"> -->
 
 
-		<input type="hidden" name="store_id" value="test">
-    <input type="hidden" name="total_amount" value="<?php echo $_order->getBaseGrandTotal(); ?>">	
-
+	<input type="hidden" name="store_id" value="testbox">
+    <input type="hidden" name="total_amount" value="<?php echo $_order->getBaseGrandTotal(); ?>">
 	<input type="hidden" name="tran_id" value="<?php echo $orderId; ?>">
     <input type="hidden" name="success_url" value="<?php echo Mage::getBaseUrl();?>checkout/onepage/success">
 	<input type="hidden" name="fail_url" value="<?php echo Mage::getBaseUrl(); ?>checkout/onepage/success">
 	<input type="hidden" name="cancel_url" value="<?php echo Mage::getBaseUrl(); ?>checkout/onepage/failure">
+	<input type="hidden" name="version" value="2.00" />
 	
 </form>
 <script type="text/javascript">

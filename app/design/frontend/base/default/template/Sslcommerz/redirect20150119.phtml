@@ -1,0 +1,36 @@
+<?php
+/*
+Sslcommerz Payment Controller
+By: Abdul Matin
+www.matinict.wordpress.com
+*/
+
+
+// Retrieve order
+$_order = new Mage_Sales_Model_Order();
+$orderId = Mage::getSingleton('checkout/session')->getLastRealOrderId();
+$_order->loadByIncrementId($orderId);
+
+// Change Your Store Url Here.............
+
+//$_storeUrl = "http://192.168.69.190/infinitymegamall.com";
+//$_storeUrl = "http://demo.sslwireless.com/infinitymegamall";
+//http://demo.sslwireless.com/infinitymegamall
+?>
+<form name="Sslcommerzform" method="post" action="https://www.sslcommerz.com.bd/testbox/process/index.php">
+	
+<!-- <form name="Sslcommerzform" method="post" action="https://www.sslcommerz.com.bd/process/index.php"> -->
+
+
+		<input type="hidden" name="store_id" value="test">
+    <input type="hidden" name="total_amount" value="<?php echo $_order->getBaseGrandTotal(); ?>">	
+
+	<input type="hidden" name="tran_id" value="<?php echo $orderId; ?>">
+    <input type="hidden" name="success_url" value="<?php echo Mage::getBaseUrl();?>checkout/onepage/success">
+	<input type="hidden" name="fail_url" value="<?php echo Mage::getBaseUrl(); ?>checkout/onepage/success">
+	<input type="hidden" name="cancel_url" value="<?php echo Mage::getBaseUrl(); ?>checkout/onepage/failure">
+	
+</form>
+<script type="text/javascript">
+document.Sslcommerzform.submit();
+</script>
