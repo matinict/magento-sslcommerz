@@ -13,7 +13,8 @@ action="https://www.sslcommerz.com.bd/gwprocess/testbox/" Remove testbox as acti
 <input type="hidden" name="store_id" value="testbox"> Change value="yourstoreid" 
 
 2. Remove testbox url and add your store id Passward
-/site/app/design/frontend/default/blacknwhite/template/checkout/success.phtml 
+/app/design/frontend/base/default/template/checkout/success.phtml 
+(or  /site/app/design/frontend/default/yourtheme/template/checkout/success.phtml )
 
 $store_id=urlencode("testbox"); Change"yourstoreid" 
 $store_passwd=urlencode("qwerty"); Change"your-store password" 
