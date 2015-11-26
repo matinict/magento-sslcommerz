@@ -8,7 +8,7 @@ action="https://www.sslcommerz.com.bd/testbox/process/index.php" Change to
 action="https://www.sslcommerz.com.bd/process/index.php">
 
 
-<input type="hidden" name="store_id" value="test"> Change value="dailybazar24test001" 
+<input type="hidden" name="store_id" value="test"> Change value="testbox" 
 
 2. Remove testbox url and add your store vai
 
