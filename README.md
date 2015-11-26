@@ -1,6 +1,11 @@
 # magento-sslcommerz
 
 
+Install instruction:
+
+Download this module & Upload your magento site root directory  
+
+
 For Live Store Update:
 
 1. Remove testbox  Url  Value ./app/design/frontend/base/default/template/Sslcommerz/redirect.phtml
