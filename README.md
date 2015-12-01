@@ -15,7 +15,7 @@ action="https://www.sslcommerz.com.bd/process/index.php">
 
 <input type="hidden" name="store_id" value="test"> Change value="testbox" 
 
-2. Remove testbox url and add your store vai
+2. Remove testbox url and add your store id
 
 /site/app/design/frontend/default/your_theme/template/checkout/success.phtml 
 
