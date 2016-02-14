@@ -25,3 +25,8 @@ action="https://www.sslcommerz.com.bd/process/index.php">
 
 $c = new soapclient('https://www.sslcommerz.com.bd/testbox/validator/validationserver.php?wsdl');  Remove testbox
 $c = new soapclient('https://www.sslcommerz.com.bd/validator/validationserver.php?wsdl');
+
+Change to store_id (testbox)& Passward(qwerty):
+ 
+$store_id=urlencode("testbox");
+$store_passwd=urlencode("qwerty");
